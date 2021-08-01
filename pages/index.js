@@ -38,10 +38,10 @@ const Home = ({ dataBanner, dataPiano, dataEPiano, dataOrgan, dataGuitar }) => {
 
         <div className={styles.topRight}>
 
-          <img
+          {/* <img
             width={'90%'}
             style={{ borderRadius: 8, boxShadow: '1px 1px 5px #000000' }}
-            src={'https://api.nhaccutrangan.com//image/banner_2.jpg'} />
+            src={'https://api.nhaccutrangan.com//image/banner_2.jpg'} /> */}
         </div>
 
       </div>

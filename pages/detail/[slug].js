@@ -23,9 +23,9 @@ const Detail = ({ data }) => {
       </Head>
       <div className={styles.mainInfoTop}>
 
-        <img
+        {/* <img
           className={styles.imageProduct}
-          src={data.data.image}></img>
+          src={data.data.image}></img> */}
 
         <div className={styles.statusProduct}>
           <text className={styles.titleProduct}>{data.data.name}</text>
