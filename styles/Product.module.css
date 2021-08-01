@@ -1,0 +1,102 @@
+.listMain{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.mainItem{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 8px #00000033;
+    border-radius: 8px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none;
+}
+
+.mainItem:hover{
+    box-shadow: 1px 1px 8px #0000005d;
+}
+
+.titleProduct{
+    font-size: 16px;
+    color: #0b0c0f;
+    font-family: utm_americana; 
+    margin-top: 4px;
+}   
+
+.textPrice{
+    font-size: 14px;
+    color: #B90B0B;
+    font-family: utm_americana; 
+}   
+
+.imgProduct{
+    height: 150px;
+}
+
+.imgProductPiano{
+    height: 290px;
+}
+
+.imgProductGuitar{
+    height: 340px;
+}
+
+@media screen and (max-width: 1366px) {
+    .imgProduct{
+        height: 120px;
+    }
+
+    .imgProductPiano{
+        height: 250px;
+    }
+
+    .imgProductGuitar{
+        height: 280px;
+    }
+  }
+
+
+@media screen and (max-width: 1024px) {
+    .imgProduct{
+        height: 140px;
+    }
+
+    .imgProductPiano{
+        height: 280px;
+    }
+
+    .imgProductGuitar{
+        height: 320px;
+    }
+
+    .mainItem{
+        width: 40%;
+    }
+  }
+
+@media screen and (max-width: 800px) {
+    .mainItem{
+        width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .mainItem{
+        width: 90%;
+    }
+
+    .imgProductGuitar{
+        height: 340px;
+    }
+  }

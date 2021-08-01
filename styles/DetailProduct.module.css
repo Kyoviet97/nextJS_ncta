@@ -1,0 +1,133 @@
+.rootMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.mainInfoTop {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.imageProduct {
+    cursor: pointer;
+    width: 40%;
+    border: 1px solid #B90B0B;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #00000033;
+}
+
+.statusProduct {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.otherInfomation {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.titleProduct {
+    font-size: 26px;
+    font-family: utm_americana;
+    color: #B90B0B;
+    font-weight: 600;
+}
+
+.textInfoProduct {
+    font-size: 18px;
+    font-family: utm_americana;
+    color: #09080a;
+}
+
+.textOtherInfomation {
+    font-size: 16px;
+    font-family: utm_americana;
+    color: #B90B0B;
+}
+
+.textOtherInfomationPhone {
+    font-size: 30px;
+    font-family: utm_americana;
+    font-weight: 600;
+    color: #B90B0B;
+}
+
+.textOtherInfomationCall {
+    font-size: 18px;
+    font-family: utm_americana;
+    color: #09080a;
+}
+
+.htmlViewer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: utm_americana;
+}
+
+@media screen and (max-width: 1024px) {
+    .imageProduct {
+        width: 50%;
+        border: 1px solid #B90B0B;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .statusProduct {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .otherInfomation {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .rootMain {
+        padding: 4px;
+    }
+    .mainInfoTop {
+        flex-direction: column;
+        padding-top: 56px;
+    }
+    .textInfoProduct {
+        font-size: 16px;
+        font-family: utm_americana;
+        color: #09080a;
+    }
+    .imageProduct {
+        width: 100%;
+        padding: 0px;
+    }
+    .statusProduct {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .otherInfomation {
+        display: none;
+    }
+    .statusProduct {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .htmlViewer {
+        font-size: 16px;
+        text-align: justify;
+        padding: 4px
+    }
+}

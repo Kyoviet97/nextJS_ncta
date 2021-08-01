@@ -1,0 +1,137 @@
+.main{
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none;
+}
+
+.imageLogo{
+    display: flex
+}
+
+.mainMenu{
+    display: flex;
+    flex-direction: row;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 2px -2px gray;
+}
+
+
+.mainMenuMobie{
+    cursor: pointer;
+    display: none;
+    flex-direction: row;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleItemMenu{
+    cursor: pointer;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 14px;
+    margin-right: 14px;
+    font-family: utm_americana;
+}
+
+.titleItemMenu:hover{
+    color: #BA0000;
+}
+
+.searchInput{
+    background-color: #FFFFFF;
+    display: flex;
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.titleSearchText{
+    text-align: center;
+    margin-left: 14px;
+    margin-right: 14px;
+    font-family: utm_americana;
+    font-size: 14px;
+    margin-left: 6px;
+    color: #757575;
+}
+
+.menuMobile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0px;
+    background-color: #0084ff;
+    transition: height 150ms;
+}
+
+.menuMobileOpen{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 205px;
+    background-color: #0084ff;
+    transition: height 150ms;
+}
+
+.menuLanger{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding-left: 4px;
+    border-bottom: 1px solid #ffffff70;
+}
+
+.menuLangerHide{
+    display: none
+}
+
+.titleMenuLanger{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 4px;
+    padding-bottom: 4px;
+    font-family: utm_americana;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 800px) {
+    .main{
+        background-color: #0084ff;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+
+    .mainMenu{
+        display: none;
+    }
+
+    .mainMenuMobie{
+        display: flex;
+    }
+
+    .imageLogo{
+        display: none
+    }
+
+  }

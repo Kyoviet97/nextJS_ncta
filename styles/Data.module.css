@@ -1,0 +1,30 @@
+.mainShareSample{
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+}
+
+.htmlViewer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 18px;
+    font-family: utm_americana;
+}
+
+.textHeader{
+    background-color:#BA0000;
+    color:#FFFFFF;
+    height: 40px;
+    padding: 6px;
+    font-size: 18px;
+    font-family: utm_americana;
+    font-weight: 600;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .mainShareSample{
+        padding-top: 24px;
+    }
+}
