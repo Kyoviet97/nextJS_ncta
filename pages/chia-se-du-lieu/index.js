@@ -46,15 +46,13 @@ const Data = ({ dataTotal }) => {
         switch (slug) {
             case 'sample':
                 return window.location.assign('/chia-se-du-lieu-2')
-
-
         }
     }
 
     return (
         <div className={styles.rootMain}>
             <Head>
-                <title>Nhạc Cụ Tràng An | Chia sẻ dữ liệu</title>
+                <title>Nhạc Cụ Tràng An</title>
                 <meta name="description" content="Chia sẻ dữ liệu làm show cho các dòng đàn"></meta>
                 <meta property="og:title" content="Chia sẻ dữ liệu làm show"></meta>
                 <meta property="og:description" content="Free dữ liệu làm show hay"></meta>

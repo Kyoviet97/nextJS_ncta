@@ -38,7 +38,7 @@ const Sample = () => {
     return (
         <div className={styles.mainShareSample}>
             <Head>
-                <title>Nhạc Cụ Tràng An | Chia sẻ sample yamaha free</title>
+                <title>Nhạc Cụ Tràng An</title>
                 <meta name="description" content="Chia sẻ sample cho yamaha s975, s995, s990, s970, s670..."></meta>
                 <meta property="og:title" content="Sample hay cho đàn Yamaha"></meta>
                 <meta property="og:description" content="Chia sẻ sample cho yamaha"></meta>

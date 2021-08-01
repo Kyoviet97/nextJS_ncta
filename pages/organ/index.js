@@ -45,12 +45,12 @@ const Organ = ({ dataTotal }) => {
     return (
         <div className={styles.rootMain}>
             <Head>
-                <title>Nhạc Cụ Tràng An | Cung cấp đàn Organ điện tử</title>
+                <title>Nhạc Cụ Tràng An</title>
                 <meta name="description" content="Cung cấp Organ... giá cả hợp lý, bảo hành dài lâu"></meta>
                 <meta property="og:title" content="Mua đàn Organ giá tốt tại HN"></meta>
                 <meta property="og:description" content="Mua đàn Organ giá tốt tại HN"></meta>
                 <meta property="og:site_name" content="Nhạc Cụ Tràng An"></meta>
-                <meta property="og:image" content="https://api.nhaccutrangan.com/image/hotlines.png"></meta>
+                <meta property="og:image" content="https://api.nhaccutrangan.com/image/banner_2.jpg"></meta>
             </Head>
             <div className={styles.main}>
                 <div className={styles.mainLeft}>
