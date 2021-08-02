@@ -54,8 +54,8 @@ const Data = ({ dataTotal }) => {
             <Head>
                 <title>Nhạc Cụ Tràng An</title>
                 <meta name="description" content="Chia sẻ dữ liệu làm show cho các dòng đàn"></meta>
-                <meta property="og:title" content="Chia sẻ dữ liệu làm show"></meta>
-                <meta property="og:description" content="Free dữ liệu làm show hay"></meta>
+                <meta property="og:title" content="Free dữ liệu hay"></meta>
+                <meta property="og:description" content="Chia sẻ dữ liệu hay, đầy đủ cho các dòng đàn"></meta>
                 <meta property="og:site_name" content="Nhạc Cụ Tràng An"></meta>
                 <meta property="og:image" content="https://api.nhaccutrangan.com/image/banner_2.jpg"></meta>
             </Head>

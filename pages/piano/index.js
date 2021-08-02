@@ -66,7 +66,7 @@ const Piano = ({ dataTotal }) => {
                 <title>Nhạc Cụ Tràng An</title>
                 <meta name="description" content="Cung cấp Piano cơ, Piano điện... giá cả hợp lý, bảo hành dài lâu"></meta>
                 <meta property="og:title" content="Mua đàn Piano giá tốt"></meta>
-                <meta property="og:description" content="Cung cấp Piano cơ, Piano điện..."></meta>
+                <meta property="og:description" content="Cung cấp Piano cơ, Piano điện giá tốt nhất HN"></meta>
                 <meta property="og:site_name" content="Nhạc Cụ Tràng An"></meta>
                 <meta property="og:image" content="https://api.nhaccutrangan.com/image/banner_2.jpg"></meta>
             </Head>

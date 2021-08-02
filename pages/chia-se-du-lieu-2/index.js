@@ -40,8 +40,8 @@ const Sample = () => {
             <Head>
                 <title>Nhạc Cụ Tràng An</title>
                 <meta name="description" content="Chia sẻ sample cho yamaha s975, s995, s990, s970, s670..."></meta>
-                <meta property="og:title" content="Sample hay cho đàn Yamaha"></meta>
-                <meta property="og:description" content="Chia sẻ sample cho yamaha"></meta>
+                <meta property="og:title" content="Chia sẻ sample cho Yamaha"></meta>
+                <meta property="og:description" content="Chia sẻ sample hay cho dòng đàn yamaha"></meta>
                 <meta property="og:site_name" content="Nhạc Cụ Tràng An"></meta>
                 <meta property="og:image" content="https://api.nhaccutrangan.com/image/banner_2.jpg"></meta>
             </Head>

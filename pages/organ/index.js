@@ -45,8 +45,8 @@ const Organ = ({ dataTotal }) => {
             <Head>
                 <title>Nhạc Cụ Tràng An</title>
                 <meta name="description" content="Cung cấp Organ... giá cả hợp lý, bảo hành dài lâu"></meta>
-                <meta property="og:title" content="Mua đàn Organ giá tốt tại HN"></meta>
-                <meta property="og:description" content="Mua đàn Organ giá tốt tại HN"></meta>
+                <meta property="og:title" content="Mua đàn Organ tại HN"></meta>
+                <meta property="og:description" content="Mua đàn Organ với giá tốt nhất tại HN"></meta>
                 <meta property="og:site_name" content="Nhạc Cụ Tràng An"></meta>
                 <meta property="og:image" content="https://api.nhaccutrangan.com/image/banner_2.jpg"></meta>
             </Head>

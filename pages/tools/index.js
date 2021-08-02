@@ -34,8 +34,8 @@ const Tools = ({ dataTotal }) => {
             <Head>
                 <title>Nhạc Cụ Tràng An</title>
                 <meta name="description" content="Lnh kiện, phụ kiện giá tốt"></meta>
-                <meta property="og:title" content="Cung cấp linh kiện sỉ, lẻ..."></meta>
-                <meta property="og:description" content="Cung cấp linh kiện sỉ, lẻ... giá cả tốt nhất Hà Nội"></meta>
+                <meta property="og:title" content="Cung cấp linh kiện, phụ kiện"></meta>
+                <meta property="og:description" content="Tự hào là đơn vị cung cấp linh kiện, phụ kiện cho các dòng đàn"></meta>
                 <meta property="og:site_name" content="Nhạc Cụ Tràng An"></meta>
                 <meta property="og:image" content="https://api.nhaccutrangan.com/image/banner_2.jpg"></meta>
             </Head>
