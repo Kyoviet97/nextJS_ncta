@@ -9,10 +9,10 @@ import Skeleton from 'react-loading-skeleton';
 const Home = ({ dataBanner }) => {
   const request = new Request();
 
-  const [pianoData, setPianoData] = useState(null)
-  const [EPianoData, setEPianoData] = useState(null)
-  const [organData, setOrganData] = useState(null)
-  const [guitarData, setGuitarData] = useState(null)
+  const [pianoData, setPianoData] = useState(false)
+  const [EPianoData, setEPianoData] = useState(false)
+  const [organData, setOrganData] = useState(false)
+  const [guitarData, setGuitarData] = useState(false)
 
   useEffect(() => {
     getData()
