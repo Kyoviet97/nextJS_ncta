@@ -1,10 +1,39 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import BannerSlide from '../component/BannerSlide'
 import CreateListProduct from '../component/CreateListProduct'
 import Head from "next/head";
+import Request from "../network/Request"
+import axios from 'axios';
 
-const Home = ({ dataBanner, dataPiano, dataEPiano, dataOrgan, dataGuitar }) => {
+const Home = ({ dataBanner }) => {
+  const request = new Request();
+
+  const [pianoData, setPianoData] = useState(null)
+  const [EPianoData, setEPianoData] = useState(null)
+  const [organData, setOrganData] = useState(null)
+  const [guitarData, setGuitarData] = useState(null)
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+  const getData = async () => {
+    var dataPiano = await request.get('https://api.nhaccutrangan.com/api/Get_Piano_Category/getshort')
+    setPianoData(dataPiano)
+
+    var dataEPiano = await request.get('https://api.nhaccutrangan.com/api/Get_Electric_Piano/getshort')
+    setEPianoData(dataEPiano)
+
+    var dataOrgan = await request.get('https://api.nhaccutrangan.com/api/Get_Organ_Category/getshort')
+    setOrganData(dataOrgan)
+
+    var dataGuitar = await request.get('https://api.nhaccutrangan.com/api/Get_Guitar_Category/getshort')
+    setGuitarData(dataGuitar)
+
+  }
+
+
   const CategoryTitle = (props) => {
     return (
       <div className={styles.mainTitle}>
@@ -46,16 +75,16 @@ const Home = ({ dataBanner, dataPiano, dataEPiano, dataOrgan, dataGuitar }) => {
       </div>
 
       <CategoryTitle title={'Piano Cơ'} />
-      <CreateListProduct type={'piano'} data={dataPiano.data} />
+      {pianoData ? <CreateListProduct type={'piano'} data={pianoData.data} /> : null}
 
       <CategoryTitle title={'Piano Điện'} />
-      <CreateListProduct type={'piano'} data={dataEPiano.data} />
+      {EPianoData ? <CreateListProduct type={'piano'} data={EPianoData.data} /> : null}
 
       <CategoryTitle title={'Đàn Organ'} />
-      <CreateListProduct type={'organ'} data={dataOrgan.data} />
+      {organData ? <CreateListProduct type={'organ'} data={organData.data} /> : null}
 
       <CategoryTitle title={'Đàn Guitar'} />
-      <CreateListProduct type={'guitar'} data={dataGuitar.data} />
+      {guitarData ? <CreateListProduct type={'guitar'} data={guitarData.data} /> : null}
 
       <div style={{ height: 50 }} />
 
@@ -65,28 +94,12 @@ const Home = ({ dataBanner, dataPiano, dataEPiano, dataOrgan, dataGuitar }) => {
 
 export async function getServerSideProps(context) {
   var dataBanner = null;
-  var dataPiano = null;
-  var dataEPiano = null;
-  var dataOrgan = null;
-  var dataGuitar = null;
   try {
     const resBanner = await fetch(`https://api.nhaccutrangan.com/api/Get_Banner`)
     dataBanner = await resBanner.json()
-
-    const resPiano = await fetch(`https://api.nhaccutrangan.com/api/Get_Piano_Category/getshort`)
-    dataPiano = await resPiano.json()
-
-    const resEPiano = await fetch(`https://api.nhaccutrangan.com/api/Get_Electric_Piano/getshort`)
-    dataEPiano = await resEPiano.json()
-
-    const resOrgan = await fetch(`https://api.nhaccutrangan.com/api/Get_Organ_Category/getshort`)
-    dataOrgan = await resOrgan.json()
-
-    const resGuitar = await fetch(`https://api.nhaccutrangan.com/api/Get_Guitar_Category/getshort`)
-    dataGuitar = await resGuitar.json()
   } catch (error) { }
   return {
-    props: { dataBanner, dataPiano, dataEPiano, dataOrgan, dataGuitar },
+    props: { dataBanner },
   }
 }
 
