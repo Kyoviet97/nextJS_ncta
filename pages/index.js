@@ -5,7 +5,6 @@ import CreateListProduct from '../component/CreateListProduct'
 import Head from "next/head";
 
 const Home = ({ dataBanner, dataPiano, dataEPiano, dataOrgan, dataGuitar }) => {
-  console.log("======================>>>>dataEPiano ", dataEPiano);
   const CategoryTitle = (props) => {
     return (
       <div className={styles.mainTitle}>
@@ -32,7 +31,7 @@ const Home = ({ dataBanner, dataPiano, dataEPiano, dataOrgan, dataGuitar }) => {
         {dataBanner ?
           <div className={styles.bannerSlide}>
             <BannerSlide
-              onClick={(link) => alert(link)}
+              onClick={(link) => null}
               data={dataBanner.data} />
           </div> : null}
 

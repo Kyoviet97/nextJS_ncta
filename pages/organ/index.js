@@ -15,12 +15,10 @@ const Organ = ({ dataTotal }) => {
             case 2:
                 return onFilter('korg');
             case 3:
-                return onFilter('yamaha');
-            case 4:
                 return onFilter('casio');
-            case 5:
+            case 4:
                 return onFilter('roland');
-            case 6:
+            case 5:
                 return onFilter('other');
             default:
                 return onFilter('all');
