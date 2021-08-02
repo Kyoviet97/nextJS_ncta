@@ -4,7 +4,7 @@ import BannerSlide from '../component/BannerSlide'
 import CreateListProduct from '../component/CreateListProduct'
 import Head from "next/head";
 import Request from "../network/Request"
-import axios from 'axios';
+import Skeleton from 'react-loading-skeleton';
 
 const Home = ({ dataBanner }) => {
   const request = new Request();
@@ -31,6 +31,14 @@ const Home = ({ dataBanner }) => {
     var dataGuitar = await request.get('https://api.nhaccutrangan.com/api/Get_Guitar_Category/getshort')
     setGuitarData(dataGuitar)
 
+  }
+
+  const loading = () => {
+    return (
+      <div style={{ padding: 10, flex: 1, height: 500 }}>
+        <Skeleton count={5} height={40} />
+      </div>
+    )
   }
 
 
@@ -75,16 +83,16 @@ const Home = ({ dataBanner }) => {
       </div>
 
       <CategoryTitle title={'Piano Cơ'} />
-      {pianoData ? <CreateListProduct type={'piano'} data={pianoData.data} /> : null}
+      {pianoData ? <CreateListProduct type={'piano'} data={pianoData.data} /> : loading()}
 
       <CategoryTitle title={'Piano Điện'} />
-      {EPianoData ? <CreateListProduct type={'piano'} data={EPianoData.data} /> : null}
+      {EPianoData ? <CreateListProduct type={'piano'} data={EPianoData.data} /> : loading()}
 
       <CategoryTitle title={'Đàn Organ'} />
-      {organData ? <CreateListProduct type={'organ'} data={organData.data} /> : null}
+      {organData ? <CreateListProduct type={'organ'} data={organData.data} /> : loading()}
 
       <CategoryTitle title={'Đàn Guitar'} />
-      {guitarData ? <CreateListProduct type={'guitar'} data={guitarData.data} /> : null}
+      {guitarData ? <CreateListProduct type={'guitar'} data={guitarData.data} /> : loading()}
 
       <div style={{ height: 50 }} />
 

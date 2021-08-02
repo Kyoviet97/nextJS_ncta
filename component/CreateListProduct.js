@@ -3,7 +3,7 @@ import styles from '../styles/Product.module.css'
 import CardProduct from './CardProduct'
 
 const CreateListProduct = ({ data, type, onClick = null }) => {
-    console.log("===================>>>>", data);
+
     const caeateListView = () => {
         var listView = []
         data.map((item) => {

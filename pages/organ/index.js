@@ -36,7 +36,7 @@ const Organ = ({ dataTotal }) => {
         dataTotal.data.map((item) => {
             { item.producer == producer && newList.push(item) }
         })
-        console.log(" ============================newList: ", newList)
+        // console.log(" ============================newList: ", newList)
         setOrganData(newList)
     }
 

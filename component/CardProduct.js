@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styles from '../styles/Product.module.css'
 
 const CardProduct = ({ data, type, onClick }) => {
-    console.log(" ===================>>> ", onClick)
     const renderSwitch = (param, image) => {
         switch (param) {
             case 'piano':
