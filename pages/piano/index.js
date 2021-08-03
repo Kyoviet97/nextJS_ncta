@@ -89,6 +89,7 @@ const Piano = ({ dataTotal }) => {
     )
 }
 
+// funtion server node call to get data Piano
 export async function getServerSideProps(context) {
     var dataTotal = { status: 200, message: 'success', data: [] }
 

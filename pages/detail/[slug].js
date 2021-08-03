@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from '../../styles/DetailProduct.module.css'
 import Head from "next/head";
-import Image from 'next/image'
+import Api from "../../network/Api"
 
 const Detail = ({ data }) => {
   if (data.status != 200) {
@@ -65,7 +65,7 @@ export async function getServerSideProps(context) {
   var slug = context.params.slug
   var type = slug.split('-')[0]
   var product = slug.replace(type + '-', '')
-  const res = await fetch(`https://api.nhaccutrangan.com/api/Get_Detail_Product?type=${type}&product=${product}`)
+  const res = await fetch(`${Api.BaseURL}Get_Detail_Product?type=${type}&product=${product}`)
   data = await res.json()
 
   return {

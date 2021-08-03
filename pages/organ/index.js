@@ -8,6 +8,7 @@ const Organ = ({ dataTotal }) => {
     var listCatergory = ['Tất cả sản phẩm', 'Organ Yamaha', 'Organ Korg', 'Organ Casio', 'Organ Roland', 'Organ Khác']
     const [dataOrgan, setOrganData] = useState(dataTotal.data)
 
+    //onClick filter item
     const setOnFilter = (type) => {
         switch (type) {
             case 1:
@@ -26,6 +27,7 @@ const Organ = ({ dataTotal }) => {
 
     }
 
+    // filter item when producer
     const onFilter = (producer) => {
         if (producer == 'all') {
             setOrganData(dataTotal.data)
@@ -36,7 +38,6 @@ const Organ = ({ dataTotal }) => {
         dataTotal.data.map((item) => {
             { item.producer == producer && newList.push(item) }
         })
-        // console.log(" ============================newList: ", newList)
         setOrganData(newList)
     }
 
@@ -69,6 +70,7 @@ const Organ = ({ dataTotal }) => {
     )
 }
 
+// funtion server node call to get data Organ
 export async function getServerSideProps() {
     const resPiano = await fetch(`https://api.nhaccutrangan.com/api/Get_Organ_Category`)
     var dataTotal = await resPiano.json()

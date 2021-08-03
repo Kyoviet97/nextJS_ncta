@@ -26,7 +26,7 @@ const BannerSlide = (props) => {
                 showStatus={false}
                 showThumbs={false}
                 infiniteLoop
-                showDuration={2000}>
+                showDuration={3000}>
                 {renderBannerItem()}
             </Carousel>
         </div>

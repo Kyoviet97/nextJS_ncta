@@ -4,6 +4,7 @@ import BannerSlide from '../component/BannerSlide'
 import CreateListProduct from '../component/CreateListProduct'
 import Head from "next/head";
 import Request from "../network/Request"
+import Api from "../network/Api"
 
 const Home = ({ dataBanner }) => {
   const request = new Request();
@@ -12,26 +13,32 @@ const Home = ({ dataBanner }) => {
   const [organData, setOrganData] = useState(false)
   const [guitarData, setGuitarData] = useState(false)
 
+  //fell full data home
   useEffect(() => {
     getData()
   }, [])
 
   const getData = async () => {
-    var dataPiano = await request.get('https://api.nhaccutrangan.com/api/Get_Piano_Category/getshort')
+    //get list piano
+    var dataPiano = await request.get(Api.GET_PIANO_LIST)
     setPianoData(dataPiano)
 
-    var dataEPiano = await request.get('https://api.nhaccutrangan.com/api/Get_Electric_Piano/getshort')
+    //get lisst e_piano
+    var dataEPiano = await request.get(Api.GET_E_PIANO_LIST)
     setEPianoData(dataEPiano)
 
-    var dataOrgan = await request.get('https://api.nhaccutrangan.com/api/Get_Organ_Category/getshort')
+    //get list organ
+    var dataOrgan = await request.get(Api.GET_ORGAN_LIST)
     setOrganData(dataOrgan)
 
-    var dataGuitar = await request.get('https://api.nhaccutrangan.com/api/Get_Guitar_Category/getshort')
+    //get list guitar
+    var dataGuitar = await request.get(Api.GET_GUITAR_LIST)
     setGuitarData(dataGuitar)
 
   }
 
 
+  //set Title category
   const CategoryTitle = (props) => {
     return (
       <div className={styles.mainTitle}>
@@ -90,6 +97,7 @@ const Home = ({ dataBanner }) => {
   )
 }
 
+//Funtion server get data banner
 export async function getServerSideProps() {
   var dataBanner = {};
   try {
