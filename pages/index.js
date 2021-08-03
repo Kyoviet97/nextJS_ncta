@@ -8,7 +8,6 @@ import Skeleton from 'react-loading-skeleton';
 
 const Home = ({ dataBanner }) => {
   const request = new Request();
-
   const [pianoData, setPianoData] = useState(false)
   const [EPianoData, setEPianoData] = useState(false)
   const [organData, setOrganData] = useState(false)
@@ -57,11 +56,11 @@ const Home = ({ dataBanner }) => {
     <div className={styles.rootMain}>
       <Head>
         <title>Nhạc Cụ Tràng An | Giá trị thực cho cuộc sống</title>
-        <meta name="description" content="Mua đàn Piano giá tốt, sửa chữa Piano, Organ, Guitar Cung cấp các loại linh kiện cho đàn Piano, Organ và các loại nhạc cụ khác."></meta>
-        <meta property="og:title" content="Nhạc cụ tràng an"></meta>
-        <meta property="og:description" content="Mua bán, sửa chữa Piano, Organ... Uy tín, chất lượng"></meta>
-        <meta property="og:site_name" content="Nhạc Cụ Tràng An"></meta>
-        <meta property="og:image" content="https://api.nhaccutrangan.com//image/style_voice.jpg"></meta>
+        <meta name="description" content="Mua đàn Piano giá tốt, sửa chữa Piano, Organ, Guitar Cung cấp các loại linh kiện cho đàn Piano, Organ và các loại nhạc cụ khác" />
+        <meta property="og:title" content="Nhạc cụ tràng an" />
+        <meta property="og:description" content="Mua bán, sửa chữa Piano, Organ... Uy tín, chất lượng" />
+        <meta property="og:site_name" content="Nhạc Cụ Tràng An" />
+        <meta property="og:image" content="https://api.nhaccutrangan.com//image/style_voice.jpg" />
       </Head>
 
       <div className={styles.main}>
@@ -100,8 +99,8 @@ const Home = ({ dataBanner }) => {
   )
 }
 
-export async function getServerSideProps(context) {
-  var dataBanner = null;
+export async function getServerSideProps() {
+  var dataBanner = {};
   try {
     const resBanner = await fetch(`https://api.nhaccutrangan.com/api/Get_Banner`)
     dataBanner = await resBanner.json()

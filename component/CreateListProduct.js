@@ -6,11 +6,13 @@ const CreateListProduct = ({ data, type, onClick = null }) => {
 
     const caeateListView = () => {
         var listView = []
-        data.map((item) => {
+        data.map((item, index) => {
             onClick ? listView.push(
-                <CardProduct onClick={(slug) => onClick(slug)} type={type} data={item} />
+                <CardProduct
+                    key={index}
+                    onClick={(slug) => onClick(slug)} type={type} data={item} />
             ) : listView.push(
-                <CardProduct type={type} data={item} />
+                <CardProduct key={index} type={type} data={item} />
             )
         })
         return listView

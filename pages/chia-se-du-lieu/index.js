@@ -63,7 +63,6 @@ const Data = ({ dataTotal }) => {
                 <div className={styles.mainLeft}>
                     <text className={styles.textHeader}>Danh mục</text>
                     <CategoryPages
-                        onClick={(index) => null}
                         listData={listCatergory} />
                 </div>
                 <div className={styles.mainRight}>

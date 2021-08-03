@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 
 export default class Request {
-
     get = async (apiPath) => {
-        var dataResult = {}
+        var dataResult = false
         await fetch(apiPath, {
             method: 'GET',
             headers: {
@@ -11,7 +10,7 @@ export default class Request {
             },
         })
             .then(response => response.json())
-            .then((data) => { dataResult = data });
+            .then(data => dataResult = data);
         return dataResult;
     }
 }

@@ -7,6 +7,7 @@ const CategoryPages = (props) => {
         props.listData.map((item, index) => {
             listView.push(
                 <div
+                    key={index}
                     onClick={() => props.onClick && props.onClick(index)}
                     className={styles.mainCategoryItem}>
                     <text className={styles.txtCategory}>{item}</text>
