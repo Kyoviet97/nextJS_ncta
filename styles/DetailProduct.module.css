@@ -13,10 +13,10 @@
 
 .imageProduct {
     cursor: pointer;
-    width: 40%;
+    width: 30%;
     border: 1px solid #B90B0B;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 4px;
+    border-radius: 6px;
     box-shadow: 1px 1px 4px #00000033;
 }
 

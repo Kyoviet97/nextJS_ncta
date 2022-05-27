@@ -58,7 +58,7 @@ const Home = ({ dataBanner }) => {
         <meta property="og:title" content="Nhạc cụ tràng an" />
         <meta property="og:description" content="Mua bán, sửa chữa Piano, Organ... Uy tín, chất lượng" />
         <meta property="og:site_name" content="Nhạc Cụ Tràng An" />
-        <meta property="og:image" content="https://api.nhaccutrangan.com//image/style_voice.jpg" />
+        <meta property="og:image" content="https://api.nhaccutrangan.com/image/style_voice.jpg" />
       </Head>
 
       <div className={styles.main}>
