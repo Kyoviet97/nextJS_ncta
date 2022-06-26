@@ -5,6 +5,7 @@ import profilePic from '../public/images/logo.png'
 import menuIcon from '../public/images/menu.svg'
 import searchIcon from '../public/images/icon_search.svg'
 import cartIcon from '../public/images/icon_cart.svg'
+// import cartIcon from '../public/images/icon_cart.svg'
 import { useRouter } from 'next/router'
 
 const Header = () => {
