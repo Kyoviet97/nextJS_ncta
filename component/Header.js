@@ -7,6 +7,15 @@ import searchIcon from '../public/images/icon_search.svg'
 import cartIcon from '../public/images/icon_cart.svg'
 import { useRouter } from 'next/router'
 
+// import React, { Component, useState } from 'react'
+// import styles from '../styles/Header.module.css'
+// import Image from 'next/image'
+// import profilePic from '../public/images/logo.png'
+// import menuIcon from '../public/images/menu.svg'
+// import searchIcon from '../public/images/icon_search.svg'
+// import cartIcon from '../public/images/icon_cart.svg'
+// import { useRouter } from 'next/router'
+
 const Header = () => {
     const router = useRouter()
     const [showMenu, setShowMenu] = useState(false)
