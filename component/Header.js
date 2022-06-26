@@ -7,6 +7,7 @@ import searchIcon from '../public/images/icon_search.svg'
 import cartIcon from '../public/images/icon_cart.svg'
 import { useRouter } from 'next/router'
 
+
 const Header = () => {
     const router = useRouter()
     const [showMenu, setShowMenu] = useState(false)
