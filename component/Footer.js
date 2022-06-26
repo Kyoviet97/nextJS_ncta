@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from '../styles/Footer.module.css'
+// import styles from '../styles/Footer.module.css'
 
 const Footer = () => {
     //iFarme facebook PAGE
