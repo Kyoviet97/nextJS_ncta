@@ -15,7 +15,7 @@ const Home = ({ dataBanner }) => {
 
   //fell full data home
   useEffect(() => {
-    getData()
+    // getData()
   }, [])
 
   const getData = async () => {
@@ -74,7 +74,7 @@ const Home = ({ dataBanner }) => {
           <img
             width={'90%'}
             style={{ borderRadius: 8, boxShadow: '1px 1px 5px #000000' }}
-            src={'https://api.nhaccutrangan.com/image/banner_2.jpg'} />
+            src={'https://pianohouse.vn/image/catalog/products/grand-piano/boston/dan-grand-piano-boston-gp-156-pe-1.jpg'} />
         </div>
 
       </div>
@@ -101,8 +101,12 @@ const Home = ({ dataBanner }) => {
 export async function getServerSideProps() {
   var dataBanner = {};
   try {
-    const resBanner = await fetch(`https://api.nhaccutrangan.com/api/Get_Banner`)
-    dataBanner = await resBanner.json()
+    // const resBanner = await fetch(`https://api.nhaccutrangan.com/api/Get_Banner`)
+    // dataBanner = await resBanner.json()
+    dataBanner = {data: [
+      {link_post: "123456", image: "https://piecewisepiano.com/wp-content/uploads/2019/09/Why-Start-With-Piano-Featured-Image-1024x536.png"},
+       {link_post: "123456", image: "https://piecewisepiano.com/wp-content/uploads/2019/09/Why-Start-With-Piano-Featured-Image-1024x536.png"}
+    ]}
   } catch (error) { }
   return {
     props: { dataBanner },

@@ -12,18 +12,18 @@ const Footer = () => {
                     <div className={styles.imageContener}>
                         <img
                             className={styles.imageProducer}
-                            src={'https://api.nhaccutrangan.com/image/brand_1.png'} />
+                            src={'https://vietthuong.vn//upload/images/THUONG-HIEU/roland.png'} />
                         <img
                             className={styles.imageProducer}
-                            src={'https://api.nhaccutrangan.com/image/brand_2.png'} />
+                            src={'https://vietthuong.vn//upload/images/THUONG-HIEU/kawai.png'} />
 
                         <img
                             className={styles.imageProducer}
-                            src={'https://api.nhaccutrangan.com/image/brand_3.png'} />
+                            src={'https://vietthuong.vn//upload/images/THUONG-HIEU/CASIO.png'} />
 
                         <img
                             className={styles.imageProducer}
-                            src={'https://api.nhaccutrangan.com/image/brand_4.png'} />
+                            src={'https://vietthuong.vn//upload/images/THUONG-HIEU/maudio.png'} />
 
                     </div>
 
