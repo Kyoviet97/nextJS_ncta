@@ -82,8 +82,6 @@ const Home = ({ dataBanner }) => {
         <meta property="og:description" content="Mua bán, sửa chữa Piano, Organ... Uy tín, chất lượng" />
         <meta property="og:site_name" content="Nhạc Cụ Tràng An" />
         <meta property="og:image" content="https://api.nhaccutrangan.com/image/style_voice.jpg" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7172045538312592"
-     crossorigin="anonymous"></script>
       </Head>
 
       <div className={styles.main}>
