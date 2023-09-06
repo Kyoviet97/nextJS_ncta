@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className={styles.imageContener}>
                         <img
                             className={styles.imageProducer}
-                            src={'https://vietthuong.vn//upload/images/THUONG-HIEU/roland.png'} />
+                            src={'https://localhost:3000/public/images/roland_brand.png'} />
                         <img
                             className={styles.imageProducer}
                             src={'https://vietthuong.vn//upload/images/THUONG-HIEU/kawai.png'} />

@@ -15,27 +15,50 @@ const Home = ({ dataBanner }) => {
 
   //fell full data home
   useEffect(() => {
-    // getData()
+    getData()
   }, [])
 
   const getData = async () => {
-    //get list piano
-    var dataPiano = await request.get(Api.GET_PIANO_LIST)
-    setPianoData(dataPiano)
+    // //get list piano
+    // var dataPiano = await request.get(Api.GET_PIANO_LIST)
+    // setPianoData(dataPiano)
 
-    //get lisst e_piano
-    var dataEPiano = await request.get(Api.GET_E_PIANO_LIST)
-    setEPianoData(dataEPiano)
+    // //get lisst e_piano
+    // var dataEPiano = await request.get(Api.GET_E_PIANO_LIST)
+    // setEPianoData(dataEPiano)
 
-    //get list organ
-    var dataOrgan = await request.get(Api.GET_ORGAN_LIST)
-    setOrganData(dataOrgan)
+    // //get list organ
+    // var dataOrgan = await request.get(Api.GET_ORGAN_LIST)
+    // setOrganData(dataOrgan)
 
-    //get list guitar
-    var dataGuitar = await request.get(Api.GET_GUITAR_LIST)
-    setGuitarData(dataGuitar)
+    // //get list guitar
+    // var dataGuitar = await request.get(Api.GET_GUITAR_LIST)
+    // setGuitarData(dataGuitar)
+
+    var dataGuitar = await getImageFile("%2Fimage%2FScreenshot_20230830-103140_M%C3%A1y%20%E1%BA%A3nh.png")
+    console.log("==================>>>>>dataGuitar ", dataGuitar);
 
   }
+
+  const getImageFile = async (fileName) => {
+    var dataResult = false
+    var myHeaders = new Headers();
+    myHeaders.append("accept-encoding", "");
+    myHeaders.append("connection", "Keep-Alive");
+    myHeaders.append("cookie", "ndus=YzJBS6yteHuinp3FLkfAkacnfKDJE9lEGVBTvNCK; STOKEN=dubox; ndut_fmt=6C5145FE8EA3698B176BD75121945C9CB40F22D88ADBEC36B4FB051C3CA76D86");
+    myHeaders.append("host", "data.terabox.com");
+    myHeaders.append("user-agent", "dubox;3.16.6;Pixel+3;android-android;13;JSbridge1.0.10;jointbridge;1.1.39;");
+
+    var requestOptions = {
+        method: 'GET',
+        headers: myHeaders
+    };
+
+    await fetch(`https://data.terabox.com/rest/2.0/pcs/thumbnail?method=generate&path=${fileName}&quality=80&size=c1080_u1600&app_id=250528&devuid=7B9F7A039523CEAC496565061391F8ED%7CVLNAXOTTZ&uk=4399567897801&md5=aae93c0cbbb72dc1a5dc24c06c48dc18&thumbnail_token=4d38500f57f339b788220104a8a4bd92&firstlaunchtime=1693323758&firstlaunchtime=1693323758&clienttype=1&channel=android_13_Pixel%203_bd-dubox_1024074a&version=3.16.6&logid=MTY5MzM2NjU5MTQ5MSxmZTgwOjoyMTM2OmRmMGI6ZTg2ZjoyZTElcm1uZXRfZGF0YTAsNTc4MjY2&imgtype=small&rand=d7701c18dfe6f5d7af88c1c76de66b75104cab22&time=1693366591&apn_id=1_-1&carrier=45209vn_45202vn&cuid=7B9F7A039523CEAC496565061391F8ED%7CVLNAXOTTZ&network_type=wifi`, requestOptions)
+        .then(response => response.json())
+        .then(result => dataResult = result)
+    return dataResult;
+}
 
 
   //set Title category
@@ -59,6 +82,8 @@ const Home = ({ dataBanner }) => {
         <meta property="og:description" content="Mua bán, sửa chữa Piano, Organ... Uy tín, chất lượng" />
         <meta property="og:site_name" content="Nhạc Cụ Tràng An" />
         <meta property="og:image" content="https://api.nhaccutrangan.com/image/style_voice.jpg" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7172045538312592"
+     crossorigin="anonymous"></script>
       </Head>
 
       <div className={styles.main}>
@@ -103,8 +128,9 @@ export async function getServerSideProps() {
   try {
     // const resBanner = await fetch(`https://api.nhaccutrangan.com/api/Get_Banner`)
     // dataBanner = await resBanner.json()
+
     dataBanner = {data: [
-      {link_post: "123456", image: "https://piecewisepiano.com/wp-content/uploads/2019/09/Why-Start-With-Piano-Featured-Image-1024x536.png"},
+        {link_post: "123456", image: "https://piecewisepiano.com/wp-content/uploads/2019/09/Why-Start-With-Piano-Featured-Image-1024x536.png"},
        {link_post: "123456", image: "https://piecewisepiano.com/wp-content/uploads/2019/09/Why-Start-With-Piano-Featured-Image-1024x536.png"}
     ]}
   } catch (error) { }
