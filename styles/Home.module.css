@@ -9,7 +9,7 @@
 }
 
 .bannerSlide{
-  width: 60%;
+  width: 100%;
   transition: width 500ms;
 }
 

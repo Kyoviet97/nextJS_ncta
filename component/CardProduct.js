@@ -32,7 +32,7 @@ const CardProduct = ({ data, type, onClick }) => {
             className={styles.mainItem}>
             {renderSwitch(type, data.image)}
             <text className={styles.titleProduct}>{data.name}</text>
-            <text className={styles.textPrice}>Giá cả: {data.price}</text>
+            <text className={styles.textPrice}>Giá cả: {data.price == "0" ? "Liên hệ" : data.price}</text>
         </div>
     )
 }

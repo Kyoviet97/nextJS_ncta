@@ -42,10 +42,10 @@ const Header = () => {
 
             <div className={styles.mainMenu}>
                 <text onClick={() => window.location.assign('/')} className={styles.titleItemMenu}>TRANG CHỦ</text>
-                <text onClick={() => window.location.assign('/piano')} className={styles.titleItemMenu}>ĐÀN PIANO</text>
-                <text onClick={() => window.location.assign('/organ')} className={styles.titleItemMenu}>ĐÀN ORGAN</text>
-                <text onClick={() => window.location.assign('/tools')} className={styles.titleItemMenu}>LINH KIỆN</text>
-                <text onClick={() => window.location.assign('/chia-se-du-lieu')} className={styles.titleItemMenu}>CHIA SẺ DỮ LIỆU</text>
+                <text onClick={() => window.location.assign('/')} className={styles.titleItemMenu}>ĐÀN PIANO</text>
+                <text onClick={() => window.location.assign('/')} className={styles.titleItemMenu}>ĐÀN ORGAN</text>
+                <text onClick={() => window.location.assign('/')} className={styles.titleItemMenu}>LINH KIỆN</text>
+                <text onClick={() => window.location.assign('/')} className={styles.titleItemMenu}>CHIA SẺ DỮ LIỆU</text>
             </div>
 
             <div className={styles.mainMenuMobie}>

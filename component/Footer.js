@@ -9,24 +9,7 @@ const Footer = () => {
             <div className={styles.topMain}>
 
                 <div className={styles.mainTopChild}>
-                    <div className={styles.imageContener}>
-                        <img
-                            className={styles.imageProducer}
-                            src={'https://localhost:3000/public/images/roland_brand.png'} />
-                        <img
-                            className={styles.imageProducer}
-                            src={'https://vietthuong.vn//upload/images/THUONG-HIEU/kawai.png'} />
-
-                        <img
-                            className={styles.imageProducer}
-                            src={'https://vietthuong.vn//upload/images/THUONG-HIEU/CASIO.png'} />
-
-                        <img
-                            className={styles.imageProducer}
-                            src={'https://vietthuong.vn//upload/images/THUONG-HIEU/maudio.png'} />
-
-                    </div>
-
+                   
                     <div className={styles.support}>
                         <text className={styles.textFooter}>HỖ TRỢ KHÁCH HÀNG</text>
                         <text className={styles.textFooter}>SĐT: 0978756985</text>
