@@ -8,38 +8,26 @@ import Api from "../network/Api"
 import big_banner from '../public/images/banner_big_1.png'
 
 
-const Home = ({ dataBanner, pianoCategory }) => {
+const Home = ({ dataBanner, pianoCategory, ePianoCategory, organCategory, guitarCategory}) => {
   const request = new Request();
   const [pianoData, setPianoData] = useState(false)
-  const [EPianoData, setEPianoData] = useState(false)
+  const [ePianoData, setePianoData] = useState(false)
   const [organData, setOrganData] = useState(false)
   const [guitarData, setGuitarData] = useState(false)
 
   //fell full data home
   useEffect(() => {
     // console.log("================>>>>dataBanner ", dataBanner);
-    console.log("================>>>>pianoCategory ", pianoCategory);
+    console.log("================>>>>ePianoCategory ", ePianoCategory);
     getData()
   }, [])
 
   const getData = async () => {
     //get list piano
-    setPianoData(pianoCategory.code == 200 ? pianoCategory.data : [])
-
-    // setPianoData(dataPiano)
-
-    // //get lisst e_piano
-    // var dataEPiano = await request.get(Api.GET_E_PIANO_LIST)
-    // setEPianoData(dataEPiano)
-
-    // //get list organ
-    // var dataOrgan = await request.get(Api.GET_ORGAN_LIST)
-    // setOrganData(dataOrgan)
-
-    // //get list guitar
-    // var dataGuitar = await request.get(Api.GET_GUITAR_LIST)
-    // setGuitarData(dataGuitar)
-
+    setPianoData(pianoCategory.code == 200 ? pianoCategory.data : false)
+    setePianoData(ePianoCategory.code == 200 ? ePianoCategory.data : false)
+    setOrganData(organCategory.code == 200 ? organCategory.data : false)
+    setGuitarData(guitarCategory.code == 200 ? guitarCategory.data : false)
   }
 
 
@@ -77,15 +65,15 @@ const Home = ({ dataBanner, pianoCategory }) => {
 
       <CategoryTitle title={'Piano Cơ'} />
       <CreateListProduct type={'piano'} data={pianoData} />
-{/* 
+
       <CategoryTitle title={'Piano Điện'} />
-      <CreateListProduct type={'piano'} data={EPianoData.data} />
+      <CreateListProduct type={'piano'} data={ePianoData} />
 
       <CategoryTitle title={'Đàn Organ'} />
-      <CreateListProduct type={'organ'} data={organData.data} />
+      <CreateListProduct type={'organ'} data={organData} />
 
       <CategoryTitle title={'Đàn Guitar'} />
-      <CreateListProduct type={'guitar'} data={guitarData.data} /> */}
+      <CreateListProduct type={'guitar'} data={guitarData} />
 
       <div style={{ height: 50 }} />
 
@@ -97,17 +85,29 @@ const Home = ({ dataBanner, pianoCategory }) => {
 export async function getServerSideProps() {
   var dataBanner = [];
   var pianoCategory = [];
+  var ePianoCategory = [];
+  var organCategory = [];
+  var guitarCategory = [];
   try {
     const resBanner = await fetch(`https://nhaccutrangan.com/api/web_api/banner`)
     dataBanner = await resBanner.json()
 
-    const pianoCategoryApi = await fetch(`https://nhaccutrangan.com/api/web_api/piano_category/`)
+    const pianoCategoryApi = await fetch(`https://nhaccutrangan.com/api/web_api/piano_category`)
     pianoCategory = await pianoCategoryApi.json()
+
+    const ePianoCategoryApi = await fetch(`https://nhaccutrangan.com/api/web_api/e_piano_category`)
+    ePianoCategory = await ePianoCategoryApi.json()
+
+    const organApiCategory = await fetch(`https://nhaccutrangan.com/api/web_api/organ_category`)
+    organCategory = await organApiCategory.json()
+
+    const guitarApiCategory = await fetch(`https://nhaccutrangan.com/api/web_api/guitar_category`)
+    guitarCategory = await guitarApiCategory.json()
 
 
   } catch (error) { }
   return {
-    props: { dataBanner, pianoCategory},
+    props: { dataBanner, pianoCategory, ePianoCategory, organCategory, guitarCategory},
   }
 }
 
