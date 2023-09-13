@@ -47,6 +47,8 @@ const Home = ({ dataBanner, pianoCategory, ePianoCategory, organCategory, guitar
   return (
     <div className={styles.rootMain}>
       <Head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7172045538312592"
+     crossorigin="anonymous"></script>
         <title>Nhạc Cụ Tràng An | Giá trị thực cho cuộc sống</title>
         <meta name="description" content="Mua đàn Piano giá tốt, sửa chữa Piano, Organ, Guitar Cung cấp các loại linh kiện cho đàn Piano, Organ và các loại nhạc cụ khác" />
         <meta property="og:title" content="Nhạc cụ tràng an" />
