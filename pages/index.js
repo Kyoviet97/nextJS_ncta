@@ -89,19 +89,19 @@ export async function getServerSideProps() {
   var organCategory = [];
   var guitarCategory = [];
   try {
-    const resBanner = await fetch(`http://api.nhaccutrangan.com/api/web_api/banner`)
+    const resBanner = await fetch(`https://api.nhaccutrangan.com/api/web_api/banner`)
     dataBanner = await resBanner.json()
 
-    const pianoCategoryApi = await fetch(`http://api.nhaccutrangan.com/api/web_api/piano_category`)
+    const pianoCategoryApi = await fetch(`https://api.nhaccutrangan.com/api/web_api/piano_category`)
     pianoCategory = await pianoCategoryApi.json()
 
-    const ePianoCategoryApi = await fetch(`http://api.nhaccutrangan.com/api/web_api/e_piano_category`)
+    const ePianoCategoryApi = await fetch(`https://api.nhaccutrangan.com/api/web_api/e_piano_category`)
     ePianoCategory = await ePianoCategoryApi.json()
 
-    const organApiCategory = await fetch(`http://api.nhaccutrangan.com/api/web_api/organ_category`)
+    const organApiCategory = await fetch(`https://api.nhaccutrangan.com/api/web_api/organ_category`)
     organCategory = await organApiCategory.json()
 
-    const guitarApiCategory = await fetch(`http://api.nhaccutrangan.com/api/web_api/guitar_category`)
+    const guitarApiCategory = await fetch(`https://api.nhaccutrangan.com/api/web_api/guitar_category`)
     guitarCategory = await guitarApiCategory.json()
 
 
